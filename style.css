@@ -76,6 +76,13 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.day{
+    text-align: center;
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 div > p{
     color: whitesmoke;
 }

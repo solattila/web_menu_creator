@@ -182,8 +182,58 @@ if(mealP3 != null){
 	document.getElementById("P3calory").innerHTML = mealP3.calory + " Kcal";
 	}
 
+	var monday = new Date();
+	var tuesday = new Date();
+	var wednesday = new Date();
+	var thursday = new Date();
+	var friday = new Date();
+	monday.setDate(monday.getDate() + (1 + 7 - monday.getDay()) % 7);
+	console.log(monday);
+	tuesday.setDate(monday.getDate() + 1);
+	console.log(tuesday);
+	wednesday.setDate(monday.getDate() + 2);
+	console.log(wednesday);
+	thursday.setDate(monday.getDate() + 3);
+	console.log(thursday);
+	friday.setDate(monday.getDate() + 4);
+	console.log(friday);
+	document.getElementById("hdate").innerHTML = monday.getFullYear().toString() + ". "
+	+ (monday.getMonth() + 1).toString() + ". " + monday.getDate().toString() + ".";
+	document.getElementById("kdate").innerHTML = tuesday.getFullYear().toString() + ". "
+	+ (tuesday.getMonth() + 1).toString() + ". " + tuesday.getDate().toString() + ".";
+	document.getElementById("sdate").innerHTML = wednesday.getFullYear().toString() + ". "
+	+ (wednesday.getMonth() + 1).toString() + ". " + wednesday.getDate().toString() + ".";
+	document.getElementById("cdate").innerHTML = thursday.getFullYear().toString() + ". "
+	+ (thursday.getMonth() + 1).toString() + ". " + thursday.getDate().toString() + ".";
+	document.getElementById("pdate").innerHTML = friday.getFullYear().toString() + ". "
+	+ (friday.getMonth() + 1).toString() + ". " + friday.getDate().toString() + ".";
+
+	var mcalory = caloryIsNull(mealH1) + caloryIsNull(mealH2) + caloryIsNull(mealH3);
+	var kcalory = caloryIsNull(mealK1) + caloryIsNull(mealK2) + caloryIsNull(mealK3);
+	var scalory = caloryIsNull(mealS1) + caloryIsNull(mealS2) + caloryIsNull(mealS3);
+	var ccalory = caloryIsNull(mealC1) + caloryIsNull(mealC2) + caloryIsNull(mealC3);
+	var pcalory = caloryIsNull(mealP1) + caloryIsNull(mealP2) + caloryIsNull(mealP3);
+	var allcalory = mcalory + kcalory + scalory + ccalory + pcalory;
+
+	document.getElementById("hcalory").innerHTML = mcalory + " Kcal";
+	document.getElementById("kcalory").innerHTML = kcalory + " Kcal";
+	document.getElementById("scalory").innerHTML = scalory + " Kcal";
+	document.getElementById("ccalory").innerHTML = ccalory + " Kcal";
+	document.getElementById("pcalory").innerHTML = pcalory + " Kcal";
+	document.getElementById("allcalory").innerHTML = allcalory + " Kcal";
+
+	
+
 	document.getElementById("firstPage").style.display='none';
 	document.getElementById("secondPage").style.display='block';
+}
+
+function caloryIsNull(obj){
+	if(obj != null){
+		return parseInt(obj.calory);
+	}
+
+	return 0;
 }
 
 function popUpWindow(meal){
