@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+        content="ie=edge">
+        <title>Heti menu keszito</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Heti menu valaszto</h1>
+        </header>
+        <main id="firstPage" style="display: block;">
+            
+            <form id="mealPlanner">
+                <div class="formcontainer">
+                <div class="daycontainer" style="background-color: rgba(255, 255, 255, .75);backdrop-filter: blur(5px); margin: 10px;">
+                <h2>Hetfo</h2>
+                <h3>Elso</h3>
+                <select id="selectMealsH1">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>masodik</h3>
+                <select id="selectMealsH2">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>harmadik</h3>
+                <select id="selectMealsH3">
+                    <option>Valassz etelt</option>
+                </select>
+            </div>
+            <div class="daycontainer" style="background-color: rgba(255, 255, 255, .75);backdrop-filter: blur(5px); margin: 10px;">
+                <h2>Kedd</h2>
+                <h3>Elso</h3>
+                <select id="selectMealsK1">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>masodik</h3>
+                <select id="selectMealsK2">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>harmadik</h3>
+                <select id="selectMealsK3">
+                    <option>Valassz etelt</option>
+                </select>
+            </div>
+            <div class="daycontainer" style="background-color: rgba(255, 255, 255, .75);backdrop-filter: blur(5px); margin: 10px;">
+                <h2>Szerda</h2>
+                <h3>Elso</h3>
+                <select id="selectMealsS1">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>masodik</h3>
+                <select id="selectMealsS2">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>harmadik</h3>
+                <select id="selectMealsS3">
+                    <option>Valassz etelt</option>
+                </select>
+            </div>
+            <div class="daycontainer" style="background-color: rgba(255, 255, 255, .75);backdrop-filter: blur(5px); margin: 10px;">
+                <h2>Csutortok</h2>
+                <h3>Elso</h3>
+                <select id="selectMealsC1">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>masodik</h3>
+                <select id="selectMealsC2">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>harmadik</h3>
+                <select id="selectMealsC3">
+                    <option>Valassz etelt</option>
+                </select>
+            </div>
+            <div class="daycontainer" style="background-color: rgba(255, 255, 255, .75);backdrop-filter: blur(5px); margin: 10px;">
+                <h2>Pentek</h2>
+                <h3>Elso</h3>
+                <select id="selectMealsP1">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>masodik</h3>
+                <select id="selectMealsP2">
+                    <option>Valassz etelt</option>
+                </select>
+                <h3>harmadik</h3>
+                <select id="selectMealsP3">
+                    <option>Valassz etelt</option>
+                </select>
+            </div>
+        </div>
+        <input type="button" name="OK" id="okbutton" value="Tovabb" onclick="createMenu()">
+              </form>
+            
+        </main>
+        <main id="secondPage" style="display: none;">
+            <div class="columnDays" id="menu">
+            <div class="row">
+                <div class="column">
+                    <div class="card" id="H1card">
+                        <div class="cardtext">
+                            <p id="H1name">Nincs Rendeles</p>
+                            <p id="H1metric"></p>
+                            <p id="H1calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="K1card">
+                        <div class="cardtext">
+                            <p id="K1name">Nincs Rendeles</p>
+                            <p id="K1metric"></p>
+                            <p id="K1calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="S1card">
+                        <div class="cardtext">
+                            <p id="S1name">Nincs Rendeles</p>
+                            <p id="S1metric"></p>
+                            <p id="S1calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="C1card">
+                        <div class="cardtext">
+                            <p id="C1name">Nincs Rendeles</p>
+                            <p id="C1metric"></p>
+                            <p id="C1calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="P1card">
+                        <div class="cardtext">
+                            <p id="P1name">Nincs Rendeles</p>
+                            <p id="P1metric"></p>
+                            <p id="P1calory"></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                    <div class="card" id="H2card">
+                        <div class="cardtext">
+                            <p id="H2name">Nincs Rendeles</p>
+                            <p id="H2metric"></p>
+                            <p id="H2calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="K2card">
+                        <div class="cardtext">
+                            <p id="K2name">Nincs Rendeles</p>
+                            <p id="K2metric"></p>
+                            <p id="K2calory"></p>
+                    </div>
+                </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="S2card">
+                        <div class="cardtext">
+                            <p id="S2name">Nincs Rendeles</p>
+                            <p id="S2metric"></p>
+                            <p id="S2calory"></p>
+                    </div>
+                </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="C2card">
+                        <div class="cardtext">
+                            <p id="C2name">Nincs Rendeles</p>
+                            <p id="C2metric"></p>
+                            <p id="C2calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="P2card">
+                        <div class="cardtext">
+                            <p id="P2name">Nincs Rendeles</p>
+                            <p id="P2metric"></p>
+                            <p id="P2calory"></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column">
+                    <div class="card" id="H3card">
+                        <div class="cardtext">
+                            <p id="H3name">Nincs Rendeles</p>
+                            <p id="H3metric"></p>
+                            <p id="H3calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="K3card">
+                        <div class="cardtext">
+                            <p id="K3name">Nincs Rendeles</p>
+                            <p id="K3metric"></p>
+                            <p id="K3calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="S3card">
+                        <div class="cardtext">
+                            <p id="S3name">Nincs Rendeles</p>
+                            <p id="S3metric"></p>
+                            <p id="S3calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="C3card">
+                        <div class="cardtext">
+                            <p id="C3name">Nincs Rendeles</p>
+                            <p id="C3metric"></p>
+                            <p id="C3calory"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card" id="P3card">
+                        <div class="cardtext">
+                            <p id="P3name">Nincs Rendeles</p>
+                            <p id="P3metric"></p>
+                            <p id="P3calory"></p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="wordbutton">
+                <button onclick="exportHTML()">Mentes wordbe</button>
+            </div>
+        </main>
+
+    </body>
+</html>
